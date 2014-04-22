@@ -1,7 +1,7 @@
 snippet spec
 	require 'spec_helper'
 	
-	describe ${1} do
+	describe ${1:`RubyClassNameFromFilename()`} do
 	  ${2}
 	end
 	${0}
@@ -86,3 +86,4 @@ snippet sc
 	scope :${1}, -> { ${2} }
 snippet saop
 	save_and_open_page
+
