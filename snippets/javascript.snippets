@@ -1,0 +1,40 @@
+snippet d
+	describe('${1}', function() {
+		${2}
+	});
+	${0}
+snippet it
+	it('${1}', function() {
+		${2}
+	});
+	${0}
+snippet be
+	beforeEach(function() {
+		${1}
+	});
+	${0}
+snippet e
+	expect(${1}).to.${0};
+snippet l
+	let ${1} = ${0};
+snippet t
+	.then((${2}) => {
+		${1}
+	})${0}
+snippet c
+	.catch((e) => {
+		${1}
+	});
+	${0}
+snippet f
+	function() {
+		${1}
+	}
+snippet m
+	${1}(${2}) {
+		${3}
+	}
+	${0}
+snippet @
+	this.${0}
+
