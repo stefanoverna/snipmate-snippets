@@ -14,7 +14,7 @@ snippet be
 	});
 	${0}
 snippet e
-	expect(${1}).to.${0};
+	expect(${1:result}).to.${0};
 snippet l
 	let ${1} = ${0};
 snippet t
@@ -27,14 +27,17 @@ snippet c
 	});
 	${0}
 snippet f
-	function() {
-		${1}
+	function(${1}) {
+		${2}
 	}
 snippet m
-	${1}(${2}) {
+	${1:methodName}(${2}) {
 		${3}
 	}
 	${0}
 snippet @
 	this.${0}
+snippet cl
+	console.log(${1});
+	${0}
 
