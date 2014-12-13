@@ -61,13 +61,13 @@ snippet hrw
 snippet n
 	expect(${1}).not_to ${2}
 snippet isvp
-	it { should validate_presence_of(:${1}) }
+	it { is_expected.to validate_presence_of(:${1}) }
 snippet isvu
-	it { should validate_uniqueness_of(:${1}) }
+	it { is_expected.to validate_uniqueness_of(:${1}) }
 snippet isvus
-	it { should validate_uniqueness_of(:${1}).scoped_to(${2}) }
+	it { is_expected.to validate_uniqueness_of(:${1}).scoped_to(${2}) }
 snippet isei
-	it { should ensure_inclusion_of(:${1}).in_array(${2}) }
+	it { is_expected.to ensure_inclusion_of(:${1}).in_array(${2}) }
 snippet hm
 	has_many :${1},
 	  inverse_of: :${2},
