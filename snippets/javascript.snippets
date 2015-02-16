@@ -15,21 +15,18 @@ snippet be
 	${0}
 snippet e
 	expect(${1:result}).to.${0};
-snippet l
-	let ${1} = ${0};
-snippet t
-	.then((${2}) => {
-		${1}
-	})${0}
-snippet c
-	.catch((e) => {
-		${1}
-	});
-	${0}
+snippet v
+	var ${1} = ${0};
 snippet f
 	function(${1}) {
 		${2}
 	}
+snippet ->
+	(${1}) => ${0}
+snippet =>
+	(${1}) => {
+	  ${2}
+	}${0}
 snippet m
 	${1:methodName}(${2}) {
 		${3}
@@ -38,9 +35,82 @@ snippet m
 snippet @
 	this.${0}
 snippet cl
-	console.log(${1});
-	${0}
-snippet cll
-	console.log(require('util').inspect(${1}));
-	${0}
+	console.log(${1});${0}
+snippet p
+	this.props.${1}
+snippet s
+	this.state.${1}
+snippet ss
+	this.setState({
+		${1}: ${2}
+	});
+snippet r
+	render: function() {
+		return (
+			${1:<div />}
+		);
+	}
+snippet cs
+	var cx = React.addons.classSet;
+snippet cdm
+	componentDidMount: function() {
+		${1}
+	},
+snippet cdup
+	componentDidUpdate(prevProps, prevState) {
+		${1}
+	},
+snippet cwm
+	componentWillMount() {
+		${1}
+	},
+snippet cwr
+	componentWillReceiveProps(nextProps) {
+		${1}
+	},
+snippet cwun
+	componentWillUnmount() {
+		${1}
+	},
+snippet cwu
+	componentWillUpdate(nextProps, nextState) {
+		${1}
+	},
+snippet cx
+	cx({
+		${1}: ${2}
+	});
+snippet gdp
+	getDefaultProps() {
+		return {
+			${1}
+		};
+	},
+snippet gis
+	getInitialState() {
+		return {
+			${1}: ${2}
+		};
+	},
+snippet ism
+	isMounted()
+snippet pt
+	propTypes: {
+		${1}: React.PropTypes.${2:string}
+	},
+snippet rcc
+	var React = require('React');
 
+	var ${1:ClassName} = React.createClass({
+		render: function() {
+			return (
+				${0:<div />}
+			);
+		}
+	});
+
+	export default $1;
+snippet scu
+	shouldComponentUpdate: function(nextProps, nextState) {
+		${1}
+	},
