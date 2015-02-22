@@ -45,7 +45,7 @@ snippet ss
 		${1}: ${2}
 	});
 snippet r
-	render: function() {
+	render() {
 		return (
 			${1:<div />}
 		);
@@ -99,10 +99,10 @@ snippet pt
 		${1}: React.PropTypes.${2:string}
 	},
 snippet rcc
-	var React = require('React');
+	import React from "react/addons";
 
 	var ${1:ClassName} = React.createClass({
-		render: function() {
+		render() {
 			return (
 				${0:<div />}
 			);
